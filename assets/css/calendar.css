@@ -1,0 +1,309 @@
+body {
+    background: rgba(0, 0, 0, .8) !important;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 5px solid red; */
+  height: 100vh;
+  /* width: 50%; */
+}
+
+.clearfix::after,
+.calendar ol::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* ================
+Calendar Styling */
+.calendar {
+  min-width: 375px;
+  position: relative;
+  
+}
+.calendar a{
+  cursor: pointer;
+}
+.calendar.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+.month-year-btn {
+  color: #444;
+}
+.month-year {
+  width: 11rem;
+}
+.month, .year {
+  font-size: 1.75rem;
+}
+
+/* .initials {
+}
+@media (max-width: 550px) {
+  .initials {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 1ch; 
+    width: 1.9ch;
+  }
+} */
+
+.calendar ol li {
+  float: left;
+  width: 14.28571%;
+}
+
+.calendar .day-names {
+  border-bottom: 5px solid rgb(94, 94, 94);
+  color: #444;
+}
+
+.calendar .days { 
+  border-bottom: 1px solid rgb(165, 165, 165);;
+  border-top: 1px solid rgb(165, 165, 165);
+  border-right: 1px solid rgb(201, 201, 201);
+  
+
+}
+.calendar .days li {
+  min-height: 6rem;
+  cursor: pointer;
+  border-left: 1px solid rgb(201, 201, 201);
+
+}
+
+.calendar .days li .date {
+  margin-bottom: 0.5rem;
+}
+
+.calendar .days li .event {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.6rem 0.4rem  0.8rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4rem;
+  margin: 0 1px 1px 0;
+}
+
+.calendar .days li .event.span-2 {
+  width: 200%;
+}
+
+.calendar .days li .event.begin {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.calendar .days li .event.end {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.calendar .days li .event.clear {
+  background: none;
+}
+
+.calendar .days li:nth-child(n+29) {
+  border-bottom: none;
+}
+
+.calendar .days li.outside .date  {
+  color: #ddd;
+}
+.calendar .days li.today .date  {
+  text-decoration: line;
+}
+.calendar .days li.today   {
+  text-decoration: line;
+  background: rgb(187, 228, 170);
+  border: 2px dashed black;
+}
+
+
+.bg-orange, .bg-orange-alt:hover { 
+  background-color: #ff976f; 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.bg-red, .bg-red-alt:hover { 
+  background-color: #ff6075; 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.bg-red-orange, .bg-red-orange-alt:hover { 
+  background-color: #fe6d56; 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.bg-green, .bg-green-alt:hover { 
+  background-color: #00c98d;
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black; 
+}
+
+.bg-sky-blue,.bg-sky-blue-alt:hover { 
+  background-color: #4cc1e6; 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.bg-blue, .bg-blue-alt:hover { 
+  background-color: #2a94bc; 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.bg-dark-blue, .bg-dark-blue-alt:hover { 
+  background-color: #365b7b; 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.bg-cyan, .bg-cyan-alt:hover { 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #00a5a7; 
+}
+
+.bg-dark-cyan, .bg-dark-cyan-alt:hover { 
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #537a8a; 
+}
+
+.bg-purple, .bg-purple-alt:hover {
+  transform: scale(3);
+  font-size: 7.5px !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #6d5a79; 
+}
+
+.bg-orange-alt { 
+  background-color: #ffa881; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-red-alt { 
+  background-color: #ff7388; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-red-orange-alt { 
+  background-color: #fe8977; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-green-alt { 
+  background-color: #00d49e; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-sky-blue-alt { 
+  background-color: #68c6e4; 
+  transition: .5s ease-in-out ;
+  transition: .5s ease-in-out ;
+}
+
+.bg-blue-alt { 
+  background-color: #459bbb; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-dark-blue-alt { 
+  background-color: #45627b; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-cyan-alt { 
+  background-color: #00b5b8; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-dark-cyan-alt { 
+  background-color: #637e89; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-purple-alt { 
+  background-color: #726879; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-gold-alt { 
+  background-color: #f1db5a; 
+  transition: .5s ease-in-out ;
+}
+
+.bg-grey-alt { 
+  background-color: #b4b4b4; 
+  transition: .5s ease-in-out ;
+}
+
+
+.bg-orange { background-color: #ff976f; }
+.bg-red { background-color: #ff6075; }
+.bg-red-orange { background-color: #fe6d56; }
+.bg-green { background-color: #00c98d; }
+.bg-sky-blue { background-color: #4cc1e6; }
+.bg-blue { background-color: #2a94bc; }
+.bg-dark-blue { background-color: #365b7b; }
+.bg-cyan { background-color: #00a5a7; }
+.bg-dark-cyan { background-color: #537a8a; }
+.bg-purple { background-color: #6d5a79; }
+
